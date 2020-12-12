@@ -14,8 +14,8 @@ import javax.validation.constraints.Size;
 public class Employee {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "eid")
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	@Column(name = "eid")
 	private Long empId;
 
 	@Size(min = 4, max = 20, message = "Name length should be min 4 and max 20.")
@@ -36,10 +36,10 @@ public class Employee {
 	}
 
 	public Employee(Long empId,
-			@Size(min = 4, max = 20, message = "Name length should be min 4 and max 20.") String firstName,
-			@Size(min = 4, max = 20, message = "Name length should be min 4 and max 20.") String lastName,
-			@Email(message = "Email is not valid.") String email,
-			@Min(value = 5000, message = "Salary should be min 5000") @Max(value = 1000000, message = "Salary should be max 100000") Integer salary) {
+			String firstName,
+			String lastName,
+			String email,
+			Integer salary) {
 		super();
 		this.empId = empId;
 		this.firstName = firstName;

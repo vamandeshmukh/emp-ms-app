@@ -23,6 +23,10 @@ import com.cg.emp.ms.service.EmployeeService;
 @CrossOrigin(origins = "*")
 public class EmpController {
 
+	public EmpController() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	@Autowired
 	EmployeeService empService;
 

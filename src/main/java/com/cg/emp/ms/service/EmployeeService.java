@@ -14,6 +14,10 @@ import com.cg.emp.ms.repository.EmployeeRepository;
 @Service
 public class EmployeeService {
 
+	public EmployeeService() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Autowired
 	EmployeeRepository repository;
 
@@ -33,7 +37,8 @@ public class EmployeeService {
 	}
 
 	public List<Employee> getEmployeeByName(String LastName) {
-		List<Employee> empList = repository.findByLastName(LastName);
+//		List<Employee> empList = repository.findByLastName(LastName);
+		List<Employee> empList = repository.findAll();
 		Iterator<Employee> iterator = empList.iterator();
 		if (iterator.next().getLastName().equals(LastName)) {
 			return empList;
